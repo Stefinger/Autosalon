@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: lightblue;
+    height: 100vh;
+    width: 100%;
+    font-family: 'Fjalla One', sans-serif;
+}
+
+.obal{
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: 20% 70% 10%;
+    grid-template-areas: 
+    'h h h'
+    'me ma a'
+    'f f f'
+    ;
+}
+
+header{
+    grid-area: h;
+    background-color: #103D9D;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img{
+    height: 100%;
+    padding: 20px;
+    margin: 20px;
+    display: block;
+}
+
+header .text{
+    padding: 20px;
+    margin: 20px;
+    color: #fff;
+}
+
+header h3{
+    text-decoration: underline;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #45A2B5;
+    margin-bottom: 5px;
+}
+
+menu{
+    grid-area: me;
+    background-color: #5072BD;
+}
+
+menu ul{
+    list-style: none;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+menu a{
+    text-decoration: none;
+    color: #fff;
+    font-size: x-large;
+}
+
+menu li{
+    padding: 5px;
+}
+
+menu a:hover{
+    color: #5072BD;
+    background-color: #fff;
+    transform: scale(1.6);
+    transition: color 1s, transform 1s;
+}
+
+main{
+    grid-area: ma;
+    background-color: #C9D4EB;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main p{
+    margin-top: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.ctverec{
+    margin: 15px;
+    padding: 15px;
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    height: 80%;
+    width: 70%;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas:
+    'a b'
+    'c d'
+    ;
+}
+
+.a{
+    grid-area: a;
+    background-image: url(images/audi.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.b{
+    grid-area: b;
+    background-image: url(images/bmw.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.c{
+    grid-area: c;
+    background-image: url(images/mercedes.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.d{
+    grid-area: d;
+    background-image: url(images/volvo.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+aside{
+    grid-area: a;
+    background-color: #5072BD;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+aside img{
+    max-width:100%;
+    max-height: 100%;
+}
+
+footer{
+    grid-area: f;
+    background-color: #103D9D;
+}
+
+footer ul{
+    list-style: none;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer a{
+    text-decoration: none;
+    color: #fff;
+    font-size: x-large;
+}
+
+footer li{
+    padding: 5px;
+}
+
+footer a:hover{
+    color: #5072BD;
+    background-color: #fff;
+    transform: scale(1.6);
+    transition: color 1s, transform 1s;
+}
+
+.nadpis_auto{
+   text-align: center;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 21pt; 
+   margin-top: 20px;
+}
+
+.popis_auto{
+    font-size: 12pt;
+    font-family:Courier;
+    color: darkblue;
+}
+
+main .formular{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+main .formular .zahlavi{
+    background-image: url(images/01.gif);
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+main .formular .zbytek{
+    background-image: url(images/02.gif);
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+main .formular .zbytek img{
+    width: 110px;
+}
+
+main .formular .zbytek2{
+    background-image: url(images/02.gif);
+    width: 500px;
+    padding: 10px;
+}
+
+@media (max-width: 500px) and (min-width:650px){
+    .obal{
+        margin: auto;
+        grid-template-columns: 100%;
+        grid-template-rows: 15% 10% 51% 14% 10%;
+        grid-template-areas: 
+        'h '
+        'me'
+        'ma'
+        'a'
+        'f'
+        ;
+    }
+    menu ul{
+        flex-direction: row;
+    }
+    menu a{
+        font-size: 13pt;
+    }
+    video{
+        width: 250px;
+        margin: 0;
+    }
+    main p{
+        font-size: small;
+    }
+    .ctverec{
+        margin: 0px;
+        padding: 0px;
+        height: 100%;
+        width: 50%;
+    }
+    aside{
+        flex-direction: row;
+        height: 100%;
+    }
+    aside img{
+        width: 200px;
+        height: 130px;
+    }
+    footer a{
+        font-size: 13pt;
+    }
+    .nadpis_auto{
+        font-size: medium;
+        font-weight: bold;
+        margin-top: 5px;
+        margin-bottom: -30px;
+    }
+    .popis_auto{
+        font-size: 10pt;
+    }
+    main img{
+        margin: 5px;
+    }
+    main .formular{
+        margin-top: 0;
+    }
+    
+}
+@media (max-width: 900px){
+    .obal{
+        margin: auto;
+        grid-template-columns: 100%;
+        grid-template-rows: 15% 10% 51% 14% 10%;
+        grid-template-areas: 
+        'h '
+        'me'
+        'ma'
+        'a'
+        'f'
+        ;
+    }
+    menu ul{
+        flex-direction: row;
+    }
+    menu a{
+        font-size: 17pt;
+    }
+    video{
+        width: 250px;
+        margin: 0;
+    }
+    main p{
+        font-size: small;
+    }
+    .ctverec{
+        margin: 0px;
+        padding: 0px;
+        height: 100%;
+        width: 50%;
+    }
+    aside{
+        flex-direction: row;
+        height: 100%;
+    }
+    aside img{
+        width: 200px;
+        height: 130px;
+    }
+    footer a{
+        font-size: 17pt;
+    }
+    .nadpis_auto{
+        margin-top: 5px;
+        margin-bottom: -30px;
+    }
+    .popis_auto{
+        font-size: 11pt;
+    }
+}
